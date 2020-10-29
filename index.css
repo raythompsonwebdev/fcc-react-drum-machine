@@ -1,5 +1,6 @@
 body{
   font-style: normal;
+  font-family: 'Roboto', sans-serif;
 }
 
 #drum-machine{
@@ -11,8 +12,13 @@ body{
   top: 50%;
   left: 50%;
   /* bring your own prefixes */
-  transform: translate(-50%, -50%);
-  display:flex
+  transform: translate(-50%, -50%);  
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: dense;
+  padding:0.5em;
 }
 
 h1{
@@ -24,13 +30,14 @@ h1{
 
 
 #display{
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, auto);
-  grid-auto-flow: dense;
-  padding:0.5em;
-  width: 50%;
+  grid-row: 1 / span 3;
+  grid-column: 1 / span 3;
+  width:100%;
+  
+}
+
+#display h1{
+  background-color:#fff;
 }
 
 .drum-pad{
@@ -39,9 +46,9 @@ h1{
   line-height:100px;
   background-color:#c90;
   text-align:center;
-  font-size:4.5em;
+  font-size:2.5em;
+  border-radius: 50px; 
 
- 
 }
 
 .drum-pad:hover{
@@ -53,4 +60,20 @@ h1{
   transform: scale(1.1);
   border-color: #ffc600;
   box-shadow: 0 0 1rem #ffc600;
+}
+
+@keyframes clickplay {
+  0%   {transform: scale(0);}
+  50%  {transform: scale(1.1); background-color:#fff; }
+  100% {transform: scale(1); }
+}
+
+.clickplay {
+  animation-name: clickplay;
+  animation-duration: 0.5s; 
+  border:none;   
+}
+
+.clickplay:active{
+  background-color:#fff;
 }
