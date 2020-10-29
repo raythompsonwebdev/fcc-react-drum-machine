@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Drum Machine</h1>
+    <h1>FCC React Drum Machine</h1>
 
     <div id="root"></div>
 
@@ -84,23 +84,24 @@
       }
 
       class DrumPad extends React.Component {
-        constructor(props) {
-          super(props);
 
-          this.removeTransition = this.removeTransition.bind(this);
-          this.clickPlay = this.clickPlay.bind(this);
-          this.playSound = this.playSound.bind(this);
-        }
+        // bindings and constructor not needed
+        // constructor(props) {
+        //   super(props);
 
-        componentDidMount() {
+        //   this.removeTransition = this.removeTransition.bind(this);
+        //   this.clickPlay = this.clickPlay.bind(this);
+        //   this.playSound = this.playSound.bind(this);
+        // } 
+
+        componentDidMount = () => {
           document.addEventListener("keydown", this.playSound);
           document.addEventListener("click", this.clickPlay);
           document.addEventListener("keyup", this.removeTransition);
           window.focus();
         }
         
-
-        removeTransition(e) {
+        removeTransition = (e) => {
           const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
           //check to see if class exist
           const classCheck = key.classList.contains("playing");
@@ -110,7 +111,7 @@
           key.classList.remove("playing");
         }
 
-        clickPlay(e) {
+        clickPlay = (e) => {
           const dataKey = e.target.getAttribute("data-key");
           if(dataKey == this.props.keycode){
             const sound = document.querySelector(`audio[data-key="${dataKey}"]`);
@@ -129,7 +130,7 @@
           
         }
 
-        playSound(e) {
+        playSound = (e) => {
           
           if(e.keyCode == this.props.keycode){
 
@@ -171,22 +172,18 @@
       }
 
       class DrumpadDisplay extends React.Component {
-        constructor(props) {
-          super(props);
-          this.state = {
-            display: "Click or Press a Key",
-          };
-          this.updateDisplay = this.updateDisplay.bind(this);
+        state = {
+          display: "Click or Press a Key",
         }
-
-        
+                
         updateDisplay = display => this.setState({ display })
 
         render() {
+         
           return (
             <section id="drum-machine">
               
-              {data.map(item => (                
+              {this.props.data.map(item => (                
                   <DrumPad
                     id={item.id}
                     src={item.url}
@@ -204,7 +201,7 @@
         }
       }
 
-      ReactDOM.render(<DrumpadDisplay />, document.getElementById("root"));
+      ReactDOM.render(<DrumpadDisplay data={data}/>, document.getElementById("root"));
     </script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>

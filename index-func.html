@@ -162,7 +162,7 @@
           
           <section id="drum-machine">
             <InstDisplay display={display} />
-            {data.map((item, key) => 
+            {props.data.map((item, key) => 
                 <DrumPad
                   id={item.id}
                   src={item.url}
@@ -179,7 +179,7 @@
       }
      
 
-      ReactDOM.render(<DrumpadDisplay />, document.getElementById("root"));
+      ReactDOM.render(<DrumpadDisplay data={data}/>, document.getElementById("root"));
     </script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
