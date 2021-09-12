@@ -1,11 +1,6 @@
-//document.addEventListener("click", clickPlay);
-//document.addEventListener("keyup", this.removeTransition);
 window.focus();
 
 const drum = document.querySelectorAll(".drum-pad");
-
-
-console.log(drum)
 
 const data = [
     {
@@ -65,7 +60,7 @@ const data = [
 ];
 
 const updateDisplay = (display) => {
-    document.querySelector("#display h1").innerText = display;
+    document.querySelector("#display h2").innerText = display.toUpperCase();
 };
 
 const clickPlay = (e) => {
@@ -98,13 +93,10 @@ const playSound = (e) => {
   } 
 };
 
-
-
 drum.forEach((element)=>{
     element.addEventListener("click", clickPlay)
     
 })
-
    
 document.addEventListener("keydown", playSound);
 
