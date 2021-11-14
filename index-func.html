@@ -11,8 +11,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-    <h1>Drum Machine</h1>
-
+    
     <div id="root"></div>
 
     <script type="text/babel">
@@ -71,14 +70,14 @@
 
       const InstDisplay = (props) => {
         
-        return (
-          <section
-            id="display"
-            style={{ backgroundColor: "red", width: "100%" }}
+        return (                    
+          <div
+            id="display"            
           >
-            {" "}
-            <h1>{props.display}</h1>{" "}
-          </section>
+            <h1>React Drum Machine</h1>
+            <h2>{props.display}</h2>{" "}
+          </div>
+          
         );
       };
 
@@ -160,7 +159,7 @@
         
         return (
           
-          <section id="drum-machine">
+          <div id="drum-machine">  
             <InstDisplay display={display} />
             {props.data.map((item, key) => 
                 <DrumPad
@@ -174,7 +173,7 @@
                 />
               )
             }
-          </section>
+          </div>
         );
       }
      

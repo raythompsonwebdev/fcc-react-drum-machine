@@ -4,17 +4,22 @@ body {
   background-color: #c5c6c7;
 }
 
-h1 {
+#drum-machine h1 {
   margin: 0;
   line-height: 60px;
   font-size: 1.2em;
   height: auto;
   display: block;
   text-align: center;
+  background-color: #fff;
 }
 
 #drum-machine {
-  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -96,7 +101,7 @@ h1 {
 }
 
 @media only screen and (min-width: 90em) {
-  h1 {
+  #drum-machine h1 {
     line-height: 60px;
     font-size: 2em;
   }
@@ -129,7 +134,7 @@ h1 {
 }
 
 @media only screen and (min-width: 64em) and (max-width: 1439px) {
-  h1 {
+  #drum-machine h1 {
     line-height: 60px;
     font-size: 2em;
   }
@@ -162,7 +167,7 @@ h1 {
 }
 
 @media only screen and (min-width: 46em) and (max-width: 1023px) {
-  h1 {
+  #drum-machine h1 {
     line-height: 60px;
     font-size: 1.8em;
   }
@@ -195,7 +200,7 @@ h1 {
 }
 
 @media only screen and (min-width: 37.5em) and (max-width: 735px) {
-  h1 {
+  #drum-machine h1 {
     line-height: 60px;
     font-size: 1.5em;
   }
@@ -228,7 +233,7 @@ h1 {
 }
 
 @media only screen and (min-width: 22.5em) and (max-width: 599px) {
-  h1 {
+  #drum-machine h1 {
     line-height: 60px;
     font-size: 1.3em;
   }

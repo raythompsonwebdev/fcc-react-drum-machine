@@ -72,13 +72,12 @@
       class InstDisplay extends React.Component {
         render() {
           return (
-            <section
-              id="display"
-              
+            <div
+              id="display"              
             >
-              {" "}
-              <h1>{this.props.display}</h1>{" "}
-            </section>
+            <h1>React Drum Machine</h1>
+            <h2>{this.props.display}</h2>
+            </div>
           );
         }
       }
@@ -181,7 +180,7 @@
         render() {
          
           return (
-            <section id="drum-machine">
+            <div id="drum-machine">
               
               {this.props.data.map(item => (                
                   <DrumPad
@@ -196,7 +195,7 @@
                 
               ))}
               <InstDisplay display={this.state.display} />
-            </section>
+            </div>
           );
         }
       }

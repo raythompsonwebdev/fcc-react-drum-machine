@@ -1,74 +1,72 @@
-body{
+body {
   font-style: normal;
   font-family: 'Roboto', sans-serif;
-  background-color:#c5c6c7;
+  background-color: #c5c6c7;
 }
 
-#drum-machine{
-  width:60%;
-  display:block;
-  margin:auto;
-  background-color:#0B0C10;
+#drum-machine {
+  width: 80%;
+
+  background-color: #0b0c10;
   position: fixed;
   top: 50%;
   left: 50%;
   /* bring your own prefixes */
-  transform: translate(-50%, -50%);  
+  transform: translate(-50%, -50%);
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, auto);
   grid-auto-flow: dense;
-  padding:1em;
+  padding: 1em;
 }
 
-h1{
-  margin:0;
-  line-height:50px;
-  display:block;
-  text-align:center;
-}
-
-
-#display{
+#display {
   grid-row: 1 / span 3;
   grid-column: 1 / span 3;
-  width:100%;
-  background-color:#1F2833;
-  display:flex;
-  align-content: center;
-  
+  width: 100%;
+  background-color: #1f2833;
 }
 
-#display h1{
-  background-color:#0B0C10;
-  width:100%;
-  height:80px;
-  line-height:80px;
-  font-size:1.5em;
-  letter-spacing:0.1em;
-  color:#c5c6c7;
-  font-weight:normal;
-  
+#display h1 {
+  margin: 0;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 1.3em;
 }
 
-.drum-pad{
-  width:100%;
+#display h2 {
+  background-color: #0b0c10;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  color: #c5c6c7;
+  font-weight: normal;
+  margin: 0;
+  text-align: center;
+}
+
+.drum-pad {
+  width: 100%;
   height: 100px;
-  line-height:90px;
-  background-color:#0B0C10;
-  text-align:center;
-  font-size:2.5em;
-  border-radius: 50px; 
-  border:5px solid #c5c6c7;
+  line-height: 90px;
+  background-color: #0b0c10;
+  text-align: center;
+  font-size: 2.5em;
+  border-radius: 50px;
+  border: 5px solid #c5c6c7;
   box-sizing: border-box;
-  color:#c90;
+  color: #c90;
 }
 
-.drum-pad:hover{
-  cursor:pointer;
-  background-color:#c90;
-  color:#0B0C10;
+.drum-pad:hover {
+  cursor: pointer;
+  background-color: #c90;
+  color: #0b0c10;
 }
 
 .playing {
@@ -78,14 +76,144 @@ h1{
 }
 
 @keyframes clickplay {
-  0%   {transform: scale(0);}
-  50%  {transform: scale(1.1); background-color:#45a29e; }
-  100% {transform: scale(1); }
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: #45a29e;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .clickplay {
   animation-name: clickplay;
-  animation-duration: 0.5s; 
-  border:none;   
+  animation-duration: 0.5s;
+  border: none;
 }
 
+@media only screen and (min-width: 90em) {
+  #drum-machine {
+    width: 60%;
+    padding: 0.5em;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  #display h1 {
+    line-height: 60px;
+    font-size: 1.5em;
+  }
+
+  #display h2 {
+    height: 120px;
+    line-height: 120px;
+    font-size: 1.7em;
+  }
+
+  .drum-pad {
+    height: 100px;
+    line-height: 95px;
+    font-size: 2.6em;
+  }
+}
+
+@media only screen and (min-width: 64em) and (max-width: 1439px) {
+  #drum-machine {
+    width: 70%;
+    padding: 0.5em;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  #display h1 {
+    line-height: 60px;
+    font-size: 1.5em;
+  }
+
+  #display h2 {
+    height: 100px;
+    line-height: 100px;
+    font-size: 1.7em;
+  }
+
+  .drum-pad {
+    height: 100px;
+    line-height: 95px;
+    font-size: 2.6em;
+  }
+}
+
+@media only screen and (min-width: 46em) and (max-width: 1023px) {
+  #drum-machine {
+    width: 70%;
+    padding: 0.5em;
+  }
+
+  #display h1 {
+    line-height: 60px;
+    font-size: 1.5em;
+  }
+
+  #display h2 {
+    height: 100px;
+    line-height: 100px;
+    font-size: 1.7em;
+  }
+
+  .drum-pad {
+    height: 100px;
+    line-height: 95px;
+    font-size: 2.6em;
+  }
+}
+
+@media only screen and (min-width: 37.5em) and (max-width: 735px) {
+  #drum-machine {
+    width: 75%;
+    padding: 0.5em;
+  }
+
+  #display h1 {
+    line-height: 60px;
+    font-size: 1.4em;
+  }
+
+  #display h2 {
+    height: 90px;
+    line-height: 90px;
+    font-size: 1.6em;
+  }
+
+  .drum-pad {
+    height: 100px;
+    line-height: 95px;
+    font-size: 2.5em;
+  }
+}
+
+@media only screen and (min-width: 22.5em) and (max-width: 599px) {
+  #drum-machine {
+    width: 80%;
+    padding: 1em;
+  }
+
+  #display h1 {
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+
+  #display h2 {
+    height: 90px;
+    line-height: 90px;
+    font-size: 1.6em;
+  }
+
+  .drum-pad {
+    height: 100px;
+    line-height: 95px;
+    font-size: 2.5em;
+  }
+}
