@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Drum Machine</title>
+    <title>React Drum Machine</title>
     <link rel="stylesheet" href="index.css" />
     <script src="https://unpkg.com/react@16.8.2/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16.8.2/umd/react-dom.development.js"></script>
@@ -12,8 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>FCC React Drum Machine</h1>
-
+    
     <div id="root"></div>
 
     <script type="text/babel">
@@ -73,7 +72,7 @@
         render() {
           return (
             <div
-              id="display"              
+              id="display"             
             >
             <h1>React Drum Machine</h1>
             <h2>{this.props.display}</h2>
@@ -202,6 +201,6 @@
 
       ReactDOM.render(<DrumpadDisplay data={data}/>, document.getElementById("root"));
     </script>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
   </body>
 </html>

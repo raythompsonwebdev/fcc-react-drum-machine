@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Drum Machine</title>
+    <title>React Drum Machine</title>
     <link rel="stylesheet" href="index.css" />
     <script src="https://unpkg.com/react@16.8.2/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16.8.2/umd/react-dom.development.js"></script>
@@ -71,13 +71,10 @@
       const InstDisplay = (props) => {
         
         return (                    
-          <div
-            id="display"            
-          >
+          <div id="display">
             <h1>React Drum Machine</h1>
             <h2>{props.display}</h2>{" "}
-          </div>
-          
+          </div>          
         );
       };
 
@@ -175,11 +172,10 @@
             }
           </div>
         );
-      }
-     
+      }     
 
       ReactDOM.render(<DrumpadDisplay data={data}/>, document.getElementById("root"));
     </script>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
   </body>
 </html>
