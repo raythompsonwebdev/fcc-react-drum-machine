@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <a href="/index.html">link to react using functions</a>
+  <a href="/index.html">React using functions</a>
 
   <div id="root"></div>
 
@@ -26,50 +26,55 @@
         letter: "Q",
         keycode: 81,
         id: "Open-HH",
-        url: "./FCC-Drum-Machine-Sounds/clap.wav",
+        url: "https://www.dropbox.com/s/uoltij83v5qzodt/hihat.wav?raw=true",
       },
       {
         letter: "W",
         keycode: 87,
         id: "Closed-HH",
-        url: "./FCC-Drum-Machine-Sounds/hihat.wav",
+        url: "https://www.dropbox.com/s/uoltij83v5qzodt/hihat.wav?raw=true",
       },
       {
         letter: "E",
         keycode: 69,
-        id: "Kick-and-Hat",
-        url: "./FCC-Drum-Machine-Sounds/kick.wav",
+        id: "Kick",
+        url: "https://www.dropbox.com/s/n23xi84cwm4pp56/kick.wav?raw=true",
       },
       {
         letter: "A",
         keycode: 65,
-        id: "Punchy-Kick",
-        url: "./FCC-Drum-Machine-Sounds/openhat.wav",
+        id: "Clap",
+        url: "https://www.dropbox.com/s/ws0xtbmc86ef1jk/clap.wav?raw=true",
       },
       {
         letter: "S",
         keycode: 83,
-        id: "Kick",
-        url: "./FCC-Drum-Machine-Sounds/boom.wav",
+        id: "Boom",
+        url: "https://www.dropbox.com/s/el7w19duuwcthjr/boom.wav?raw=true",
       },
       {
         letter: "D",
         keycode: 68,
         id: "Snare",
-        url: "./FCC-Drum-Machine-Sounds/ride.wav",
+        url: "https://www.dropbox.com/s/w11ms1kvg1cm16m/snare.wav?raw=true",
       },
       {
         letter: "Z",
         keycode: 90,
-        id: "Side-Stick",
-        url: "./FCC-Drum-Machine-Sounds/snare.wav",
+        id: "Tink",
+        url: "https://www.dropbox.com/s/s61pecx06f7l4rx/tink.wav?raw=true",
       },
-      { letter: "X", keycode: 88, id: "Clap", url: "./FCC-Drum-Machine-Sounds/tom.wav" },
+      {
+        letter: "X",
+        keycode: 88,
+        id: "Tom",
+        url: "https://www.dropbox.com/s/jrg1yinib00p3b5/tom.wav?raw=true"
+      },
       {
         letter: "C",
         keycode: 67,
-        id: "Shaker",
-        url: "./FCC-Drum-Machine-Sounds/tink.wav",
+        id: "Ride",
+        url: "https://www.dropbox.com/s/btsa464ag6h0dkq/ride.wav?raw=true",
       },
     ];
 
@@ -79,7 +84,7 @@
           <div
             id="display"
           >
-            <h1>React Drum Machine</h1>
+            <h1>React Drum Machine using Classes</h1>
             <h2>{this.props.display}</h2>
           </div>
         );
